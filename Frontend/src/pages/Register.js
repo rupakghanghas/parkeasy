@@ -54,7 +54,8 @@ const Register = () => {
                     <select className="form-select" value={type} onChange={(e) => setType(e.target.value)} required>
                         <option value="">Select</option>
                         <option value="admin">Admin</option>
-                        <option value="seeker">seeker</option>
+                        <option value="seeker">Seeker</option>
+                        <option value="owner">Owner</option>
                     </select>
                 </div>
                 <div className='d-flex justify-content-between'>
