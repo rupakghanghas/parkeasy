@@ -25,8 +25,27 @@ app.use(cors())
 connectDB();
 
 
-app.get('/', isLoggedIn, async (req, res) => {
-    res.json({ message: 'Hello world!'})
+// Health check endpoint for Render
+app.get('/', async (req, res) => {
+    res.json({ 
+        message: 'Parking System API is running!',
+        status: 'OK',
+        timestamp: new Date().toISOString()
+    })
+})
+
+// Health check endpoint specifically for Render
+app.get('/health', async (req, res) => {
+    res.json({ 
+        status: 'healthy',
+        service: 'parking-system-api',
+        timestamp: new Date().toISOString()
+    })
+})
+
+// Protected route for authenticated users
+app.get('/protected', isLoggedIn, async (req, res) => {
+    res.json({ message: 'Hello world!' })
 })
 
 app.use("/user", userRouter)
