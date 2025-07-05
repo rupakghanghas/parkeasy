@@ -7,12 +7,13 @@ const { Types } = require("mongoose");
 
 const userRouter = Router();
 
-const { SECRET_JWT_CODE = "jafha71yeiqquy1#@!" } = process.env;
+const SECRET_JWT_CODE = process.env.JWT_SECRET || "jafha71yeiqquy1#@!";
 
 // Register new user
 userRouter.post("/register", async (req, res) => {
     try {
         let { name, email, password, type } = req.body
+        console.log('Registration attempt:', { name, email, type });
 
         // Input validation
         const schema = Joi.object({
@@ -75,6 +76,7 @@ userRouter.get("/", async (req, res) => {
 userRouter.post("/login", async (req, res) => {
     try {
         const { email, password } = req.body
+        console.log('Login attempt:', { email });
 
         // Input validation
         const schema = Joi.object({
