@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 // Use environment variable for API URL, fallback to localhost for development
-const BASE_URL = process.env.REACT_APP_API_URL || "https://parking-backend.onrender.com/"
+const BASE_URL = process.env.REACT_APP_API_URL || "https://parking-backend-d3aa.onrender.com"
 
 export const fetchParkings = async ({ user_id, setParkings }) => {
     try {
