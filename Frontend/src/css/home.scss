@@ -1,0 +1,58 @@
+.banner {
+    height: 700px;
+    background-image: url('./../img/parking-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 10px;
+
+    h1 {
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        font-size: 3.5rem;
+        font-weight: bold;
+
+        span {
+            font-weight: lighter;
+            color: #2196F3;
+        }
+    }
+}
+
+
+.services-card-icon {
+    height: 230px;
+    object-fit: contain;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.testimonial-card {
+    margin-top: 60px;
+    background-color: #000;
+    
+
+    img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 10px;
+        margin-top: -50px;
+    }
+
+    span {
+        font-weight: lighter;
+    }
+
+    strong {
+        font-size: 20px;
+    }
+}

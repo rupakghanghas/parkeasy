@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: parking-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DB_URI
+        value: mongodb+srv://rkghanghas999:CxergQ7UaDEqJwFQ@cluster1.voottms.mongodb.net/db1?retryWrites=true&w=majority&appName=Cluster1
+      - key: JWT_SECRET
+        value: reserve_system_jwt_secret_2024_secure_key_xyz789
+      - key: PORT
+        value: 10000 
