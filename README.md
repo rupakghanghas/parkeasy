@@ -1,4 +1,4 @@
-# Car Parking
+# park easy
 The objective of Car Parking is to establish a platform connecting parking admins in the
 community with users seeking affordable parking spaces. This website assists parking admins in
 ren+ng out their additional parking spaces, enabling them to earn extra income. Additionally, it
